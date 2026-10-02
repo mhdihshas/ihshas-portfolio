@@ -1380,6 +1380,27 @@ h2 {
   }
 }
 
+
+/* Live project links and supplied screenshots */
+.project-card { grid-template-columns: 38px minmax(0, 1fr) minmax(0, 1fr); gap: 24px; }
+.project-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.project-content > .project-demo-note { font-size: .78rem; line-height: 1.7; margin-top: 14px; }
+.project-visual.project-preview { min-height: 0; align-self: center; margin: 0; background: #101010; }
+.screenshot-link { display: block; }
+.screenshot-link img { width: 100%; height: auto; }
+.project-preview figcaption { padding: 16px; color: var(--muted); font-size: .72rem; border-top: 1px solid var(--line-soft); }
+.project-preview figcaption span { display: block; margin-top: 4px; color: var(--gold-bright); }
+.project-actions a:focus-visible, .screenshot-link:focus-visible { outline: 3px solid var(--gold-bright); outline-offset: -3px; }
+@media (max-width: 1050px) {
+ .project-card { grid-template-columns: 38px minmax(0, 1fr); }
+ .project-preview { grid-column: 2; }
+}
+@media (max-width: 760px) {
+ .project-card { grid-template-columns: minmax(0, 1fr); }
+ .project-preview { grid-column: 1; }
+ .project-actions .btn { flex: 1; padding-inline: 18px; }
+}
+
 </style>
   <script>
 document.addEventListener("DOMContentLoaded", () => {
@@ -1555,22 +1576,18 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="tag-list">
                 <span>HTML</span><span>CSS</span><span>JavaScript</span><span>LocalStorage</span>
               </div>
-            </div>
-            <div class="project-visual taskflow-visual" aria-label="Decorative TaskFlow dashboard preview">
-              <div class="mock-window">
-                <div class="mock-window-bar"><i></i><i></i><i></i></div>
-                <div class="mock-dashboard">
-                  <div class="mock-sidebar"></div>
-                  <div class="mock-main">
-                    <div class="mock-title"></div>
-                    <div class="mock-stats"><span></span><span></span><span></span></div>
-                    <div class="mock-task"></div>
-                    <div class="mock-task short"></div>
-                    <div class="mock-task"></div>
-                  </div>
-                </div>
+              <div class="project-actions">
+                <a class="btn btn-primary" href="https://web--taskflow.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open TaskFlow live demo (opens in new tab)">Live Demo ↗</a>
+                <a class="btn btn-secondary" href="https://github.com/mhdihshas/TaskFlow" target="_blank" rel="noopener noreferrer" aria-label="View TaskFlow source on GitHub (opens in new tab)">GitHub ↗</a>
               </div>
+              <p class="project-demo-note">Create a demo account to explore. Tasks and accounts stay in your browser.</p>
             </div>
+            <figure class="project-visual project-preview">
+              <a class="screenshot-link" href="assets/taskflow-screenshot.png" target="_blank" rel="noopener noreferrer" aria-label="View full-size TaskFlow sign-in screenshot (opens in new tab)">
+                <img src="assets/taskflow-screenshot.png" alt="TaskFlow sign-in page" loading="lazy" width="1352" height="612">
+              </a>
+              <figcaption>TaskFlow · Sign-in screen <span>View full screenshot ↗</span></figcaption>
+            </figure>
           </article>
 
           <article class="project-card reveal">
@@ -1588,25 +1605,25 @@ document.addEventListener("DOMContentLoaded", () => {
               </p>
               <ul class="feature-list">
                 <li>TF-IDF and Logistic Regression text-classification pipeline</li>
-                <li>Flask backend with SQLite data storage and multi-user scan history</li>
+                <li>Flask backend with PostgreSQL data storage and multi-user scan history</li>
                 <li>Input validation and fraud-risk scoring</li>
                 <li>Interactive dashboard using JavaScript and AJAX</li>
               </ul>
               <div class="tag-list">
-                <span>Python</span><span>Flask</span><span>SQLite</span><span>Machine Learning</span><span>AJAX</span>
+                <span>Python</span><span>Flask</span><span>PostgreSQL</span><span>Machine Learning</span><span>AJAX</span>
               </div>
+              <div class="project-actions">
+                <a class="btn btn-primary" href="https://trusthair-ai.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open TrustHire AI live demo (opens in new tab)">Live Demo ↗</a>
+                <a class="btn btn-secondary" href="https://github.com/mhdihshas/TrustHair-AI" target="_blank" rel="noopener noreferrer" aria-label="View TrustHire AI source on GitHub (opens in new tab)">GitHub ↗</a>
+              </div>
+              <p class="project-demo-note">Sign in or create an account to try the job advertisement analyzer.</p>
             </div>
-            <div class="project-visual trusthire-visual" aria-label="Decorative TrustHire AI dashboard preview">
-              <div class="ai-shield">
-                <div class="shield-core">AI</div>
-                <div class="scan-line"></div>
-              </div>
-              <div class="risk-card">
-                <span>Fraud Risk</span>
-                <strong>18%</strong>
-                <div class="risk-bar"><i></i></div>
-              </div>
-            </div>
+            <figure class="project-visual project-preview">
+              <a class="screenshot-link" href="assets/trusthire-screenshot.png" target="_blank" rel="noopener noreferrer" aria-label="View full-size TrustHire AI sign-in screenshot (opens in new tab)">
+                <img src="assets/trusthire-screenshot.png" alt="TrustHire AI sign-in page" loading="lazy" width="1359" height="607">
+              </a>
+              <figcaption>TrustHire AI · Sign-in screen <span>View full screenshot ↗</span></figcaption>
+            </figure>
           </article>
         </div>
       </div>

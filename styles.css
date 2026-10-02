@@ -1371,3 +1371,23 @@ h2 {
     transform: none;
   }
 }
+
+/* Live project links and supplied screenshots */
+.project-card { grid-template-columns: 38px minmax(0, 1fr) minmax(0, 1fr); gap: 24px; }
+.project-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.project-content > .project-demo-note { font-size: .78rem; line-height: 1.7; margin-top: 14px; }
+.project-visual.project-preview { min-height: 0; align-self: center; margin: 0; background: #101010; }
+.screenshot-link { display: block; }
+.screenshot-link img { width: 100%; height: auto; }
+.project-preview figcaption { padding: 16px; color: var(--muted); font-size: .72rem; border-top: 1px solid var(--line-soft); }
+.project-preview figcaption span { display: block; margin-top: 4px; color: var(--gold-bright); }
+.project-actions a:focus-visible, .screenshot-link:focus-visible { outline: 3px solid var(--gold-bright); outline-offset: -3px; }
+@media (max-width: 1050px) {
+ .project-card { grid-template-columns: 38px minmax(0, 1fr); }
+ .project-preview { grid-column: 2; }
+}
+@media (max-width: 760px) {
+ .project-card { grid-template-columns: minmax(0, 1fr); }
+ .project-preview { grid-column: 1; }
+ .project-actions .btn { flex: 1; padding-inline: 18px; }
+}
